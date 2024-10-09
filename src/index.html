@@ -1,0 +1,16 @@
+<script type="text/javascript">
+    let count = 0;
+    
+    const eventSource = new EventSource('/sse');
+    eventSource.onmessage = ({ data }) => {
+      if(count > 10) {
+        eventSource.close()
+      }
+
+      const message = document.createElement('li');
+      message.innerText = 'New message: ' + data;
+      document.body.appendChild(message);
+
+      count++;
+    }
+  </script>
