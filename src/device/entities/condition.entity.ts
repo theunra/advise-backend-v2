@@ -1,9 +1,6 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Device } from "./device.entity";
-
-enum ConditionExpression {
-    NORMAL = "normal",
-}
+import { ConditionExpression } from "../enums/condition-expression.enum";
 
 @Entity('conditions')
 export class Condition {
