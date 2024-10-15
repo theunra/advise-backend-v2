@@ -16,7 +16,6 @@ export class DeviceService {
                 subject.next({data: createDeviceDataDto} as MessageEvent);
             });
         }
-
         
     }
     listenDeviceData(response : Response, deviceId : string) {
