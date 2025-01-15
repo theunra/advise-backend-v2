@@ -17,7 +17,7 @@ import { User } from 'src/user/entities/user.entity';
         port: configService.getOrThrow('DB_PORT'),
         database: configService.getOrThrow('DB_NAME'),
         synchronize: configService.getOrThrow('DB_SYNC'),
-        // entities: ['../**/*.entity{.ts,.js}'],
+        // entities: ['../**/*.entity{.ts,.js}'], 
         entities: [
             User,
             Sensor,

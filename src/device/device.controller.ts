@@ -16,7 +16,7 @@ export class DeviceController {
         @Body() createDeviceDataDto: CreateDeviceDataDto,
     ) {
         console.log(`create device ${deviceId} data with :`);
-        console.log(createDeviceDataDto);
+        console.log(createDeviceDataDto); 
         
         return this.deviceService.createDeviceData(deviceId, createDeviceDataDto);
     }
